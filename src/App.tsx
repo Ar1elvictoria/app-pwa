@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SplashScreen from "./screens/SplashScreen";
 import Home from "./screens/Home";
 
