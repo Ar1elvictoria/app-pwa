@@ -1,13 +1,19 @@
 import { useState } from "react";
 import SplashScreen from "./screens/SplashScreen";
-import Home from "./screens/Home";
+import ClientesScreen from "./screens/ClientesScreen";
+import OfflineIndicator from "./components/OfflineIndicator";
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 
-  return showSplash ? (
-    <SplashScreen onDone={() => setShowSplash(false)} />
-  ) : (
-    <Home />
+  return (
+    <>
+      <OfflineIndicator />
+      {showSplash ? (
+        <SplashScreen onDone={() => setShowSplash(false)} />
+      ) : (
+        <ClientesScreen />
+      )}
+    </>
   );
 }
